@@ -1,6 +1,7 @@
 use std::thread;
 use std::time::Duration;
 use xoxopay_backend::config::Config;
+use xoxopay_backend::models::{RateLimitConfig, RateLimitScope};
 use xoxopay_backend::service::RateLimitService;
 
 // #[test]

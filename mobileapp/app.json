@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "xoxopay",
-    "slug": "xoxopay",
+    "name": "BLINKS",
+    "slug": "BLINKS",
     "version": "1.0.0",
-    "scheme": "xoxopay",
+    "scheme": "BLINKS",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

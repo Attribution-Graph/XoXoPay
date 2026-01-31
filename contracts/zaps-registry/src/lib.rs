@@ -34,10 +34,10 @@ pub enum DataKey {
 }
 
 #[contract]
-pub struct XoXoPayRegistry;
+pub struct BLINKSRegistry;
 
 #[contractimpl]
-impl XoXoPayRegistry {
+impl BLINKSRegistry {
     /// Initialize the contract with an admin address
     pub fn initialize(env: Env, admin: Address) -> Result<(), Error> {
         if env.storage().instance().has(&DataKey::Admin) {

@@ -85,9 +85,9 @@ const TokenSelectCard = ({
 export default function TransferScreen() {
   const router = useRouter();
   const [step, setStep] = useState(0);
-  const [transferType, setTransferType] = useState<"xoxopay" | "external" | null>(
-    null
-  );
+  const [transferType, setTransferType] = useState<
+    "BLINKS" | "external" | null
+  >(null);
   const [recipient, setRecipient] = useState("");
   const [amount, setAmount] = useState("");
   const [selectedToken, setSelectedToken] = useState(TOKENS[0].id);
@@ -121,10 +121,10 @@ export default function TransferScreen() {
       <View style={styles.cardsContainer}>
         <AccountTypeCard
           title="Blinx User"
-          description="Send instantly to any Blinx user via their XoXoPay ID"
+          description="Send instantly to any Blinx user via their BLINKS ID"
           Icon={XoXoPayIcon}
-          selected={transferType === "xoxopay"}
-          onPress={() => setTransferType("xoxopay")}
+          selected={transferType === "BLINKS"}
+          onPress={() => setTransferType("BLINKS")}
         />
         <AccountTypeCard
           title="External Wallet"
@@ -142,7 +142,7 @@ export default function TransferScreen() {
       <View style={styles.inputsSection}>
         <Input
           placeholder={
-            transferType === "xoxopay" ? "Recipient XoXoPay ID" : "Wallet Address"
+            transferType === "BLINKS" ? "Recipient BLINKS ID" : "Wallet Address"
           }
           value={recipient}
           onChangeText={setRecipient}

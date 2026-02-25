@@ -17,7 +17,7 @@ import { COLORS } from "../src/constants/colors";
 import { Button } from "../src/components/Button";
 import { AccountTypeCard } from "../src/components/AccountTypeCard";
 
-import XoXoPayIcon from "../assets/icon-4.svg";
+import BlinksIcon from "../assets/icon-4.svg";
 import WalletIcon from "../assets/wallet.svg";
 
 if (
@@ -34,7 +34,7 @@ export default function ReceiveScreen() {
     null
   );
 
-  const zapId = "ejembiii.zap";
+  const blinkId = "ejembiii.blink";
   const walletAddress = "GABC...1234"; // Placeholder
 
   const handleNext = () => {
@@ -54,7 +54,7 @@ export default function ReceiveScreen() {
   const handleShare = async () => {
     try {
       await Share.share({
-        message: receiveType === "BLINKS" ? zapId : walletAddress,
+        message: receiveType === "BLINKS" ? blinkId : walletAddress,
       });
     } catch (error) {
       console.log(error);
@@ -67,8 +67,8 @@ export default function ReceiveScreen() {
       <View style={styles.cardsContainer}>
         <AccountTypeCard
           title="Blink User"
-          description="Receive instantly from any Blink user via your XoXoPay ID"
-          Icon={XoXoPayIcon}
+          description="Receive instantly from any Blink user via your Blink ID"
+          Icon={BlinksIcon}
           selected={receiveType === "BLINKS"}
           onPress={() => setReceiveType("BLINKS")}
         />
@@ -95,14 +95,14 @@ export default function ReceiveScreen() {
 
         <View style={styles.idDisplaySection}>
           <View style={styles.idBadge}>
-            <XoXoPayIcon width={18} height={18} />
+            <BlinksIcon width={18} height={18} />
           </View>
           <View style={styles.idTextContainer}>
             <Text style={styles.idLabel}>
-              {receiveType === "BLINKS" ? "XoXoPay ID" : "Wallet Address"}
+              {receiveType === "BLINKS" ? "Blink ID" : "Wallet Address"}
             </Text>
             <Text style={styles.idValue}>
-              {receiveType === "BLINKS" ? zapId : walletAddress}
+              {receiveType === "BLINKS" ? blinkId : walletAddress}
             </Text>
           </View>
         </View>

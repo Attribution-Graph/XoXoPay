@@ -84,7 +84,7 @@ export default function ContactSupportScreen() {
             <ContactMethod
               icon="mail-outline"
               label="Email Us"
-              sublabel="support@xoxopay.com"
+              sublabel="support@blinks.com"
               type="email"
             />
             <ContactMethod

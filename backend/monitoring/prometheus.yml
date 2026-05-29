@@ -11,3 +11,9 @@ scrape_configs:
     static_configs:
       - targets:
           - blinks-backend:3000
+
+  - job_name: xoxopay-contracts
+    metrics_path: /metrics/contracts
+    static_configs:
+      - targets:
+          - xoxopay-server:3000

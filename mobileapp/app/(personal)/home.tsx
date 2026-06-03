@@ -11,7 +11,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { COLORS } from "../../src/constants/colors";
 
-import BlinkLogo from "../../assets/blinkLogo.svg";
+import XoXoPayLogo from "../../assets/xoxopayLogo.svg";
 
 import XLMLogo from "../../assets/XML-logo.svg";
 import USDTLogo from "../../assets/USDT-logo.svg";
@@ -54,7 +54,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container} edges={["top"]}>
       <View style={styles.header}>
-        <BlinkLogo width={80} height={38} />
+        <XoXoPayLogo width={80} height={38} />
         <TouchableOpacity
           style={styles.notificationBtn}
           onPress={() => router.push("/(personal)/settings")}
@@ -96,10 +96,10 @@ export default function HomeScreen() {
             />
           </View>
 
-          <View style={styles.BLINKSIdContainer}>
-            <Text style={styles.BLINKSIdLabel}>Blink ID</Text>
-            <View style={styles.BLINKSIdRow}>
-              <Text style={styles.BLINKSIdValue}>Ejembiii.blink</Text>
+          <View style={styles.XoXoPayIdContainer}>
+            <Text style={styles.XoXoPayIdLabel}>XoXoPay ID</Text>
+            <View style={styles.XoXoPayIdRow}>
+              <Text style={styles.XoXoPayIdValue}>Ejembiii.xoxopay</Text>
               <TouchableOpacity>
                 <Ionicons name="copy-outline" size={16} color={COLORS.black} />
               </TouchableOpacity>
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     fontFamily: "Outfit_500Medium",
     color: COLORS.black,
   },
-  BLINKSIdContainer: {
+  XoXoPayIdContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -230,17 +230,17 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: "#F0F0F0",
   },
-  BLINKSIdLabel: {
+  XoXoPayIdLabel: {
     fontSize: 14,
     fontFamily: "Outfit_400Regular",
     color: "#999",
   },
-  BLINKSIdRow: {
+  XoXoPayIdRow: {
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
   },
-  BLINKSIdValue: {
+  XoXoPayIdValue: {
     fontSize: 14,
     fontFamily: "Outfit_700Bold",
     color: COLORS.black,

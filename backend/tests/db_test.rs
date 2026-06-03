@@ -1,5 +1,5 @@
-use blinks_backend::config::Config;
-use blinks_backend::db;
+use xoxopay_backend::config::Config;
+use xoxopay_backend::db;
 use sqlx::PgPool;
 
 // Note: This test requires a running database using the config.

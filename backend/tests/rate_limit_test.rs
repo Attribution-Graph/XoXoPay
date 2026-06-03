@@ -1,7 +1,7 @@
 use std::time::Duration;
-use blinks_backend::config::Config;
-use blinks_backend::models::{RateLimitConfig, RateLimitScope};
-use blinks_backend::service::RateLimitService;
+use xoxopay_backend::config::Config;
+use xoxopay_backend::models::{RateLimitConfig, RateLimitScope};
+use xoxopay_backend::service::RateLimitService;
 
 #[tokio::test]
 async fn test_rate_limit_enforcement() {

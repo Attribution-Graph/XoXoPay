@@ -8,7 +8,7 @@ import { Stack, useRouter } from "expo-router";
 import Icon1 from "../assets/icon-1.svg";
 import Icon2 from "../assets/icon-2.svg";
 import Icon3 from "../assets/icon-3.svg";
-import BlinkLogo from "../assets/blinkLogo.svg";
+import XoXoPayLogo from "../assets/xoxopayLogo.svg";
 
 export default function OnboardingScreen() {
   const router = useRouter();
@@ -27,8 +27,8 @@ export default function OnboardingScreen() {
       <SafeAreaView style={styles.splashContainer}>
         <Stack.Screen options={{ headerShown: false }} />
         <View style={styles.splashContent}>
-          <BlinkLogo width={216} height={103} style={styles.splashLogo} />
-          <Text style={styles.splashText}>BLINK</Text>
+          <XoXoPayLogo width={216} height={103} style={styles.splashLogo} />
+          <Text style={styles.splashText}>XOXOPAY</Text>
         </View>
       </SafeAreaView>
     );
@@ -40,7 +40,7 @@ export default function OnboardingScreen() {
 
       <View style={styles.content}>
         <View style={styles.header}>
-          <BlinkLogo width={116} height={53} style={styles.splashLogo} />
+          <XoXoPayLogo width={116} height={53} style={styles.splashLogo} />
         </View>
 
         <View style={styles.featureContainer}>
@@ -73,7 +73,7 @@ export default function OnboardingScreen() {
           <Text style={styles.title}>PAY OR GET PAID</Text>
           <Text style={styles.title}>WITH CRYPTO</Text>
           <Text style={styles.subtitle}>
-            Blink is the fastest to move{"\n"}crypto around
+            XoXoPay is the fastest to move{"\n"}crypto around
           </Text>
         </View>
 

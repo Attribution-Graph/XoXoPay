@@ -13,7 +13,7 @@ concurrency:
 env:
   CARGO_TERM_COLOR: always
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}/blinks-backend
+  IMAGE_NAME: ${{ github.repository }}/xoxopay-backend
 
 jobs:
   # ─── Frontend ────────────────────────────────────────────────────────────────
@@ -59,7 +59,7 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
-          POSTGRES_DB: BLINKS
+          POSTGRES_DB: XOXOPAY
         ports:
           - 5432:5432
         options: >-
@@ -77,10 +77,10 @@ jobs:
           --health-timeout 5s
           --health-retries 5
     env:
-      BLINKS_DATABASE__URL: postgres://postgres:password@localhost:5432/BLINKS
-      BLINKS_CACHE__REDIS_URL: redis://localhost:6379
-      BLINKS_QUEUE__REDIS_URL: redis://localhost:6379
-      BLINKS_JWT__SECRET: ci-test-secret-not-for-production
+      XOXOPAY_DATABASE__URL: postgres://postgres:password@localhost:5432/XOXOPAY
+      XOXOPAY_CACHE__REDIS_URL: redis://localhost:6379
+      XOXOPAY_QUEUE__REDIS_URL: redis://localhost:6379
+      XOXOPAY_JWT__SECRET: ci-test-secret-not-for-production
       RUN_ENV: test
     steps:
       - uses: actions/checkout@v4

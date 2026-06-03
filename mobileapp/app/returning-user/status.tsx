@@ -5,7 +5,7 @@ import { Stack, useRouter } from "expo-router";
 import { COLORS } from "../../src/constants/colors";
 import { Button } from "../../src/components/Button";
 import { Ionicons } from "@expo/vector-icons";
-import BlinkLogo from "../../assets/blinkLogo.svg";
+import XoXoPayLogo from "../../assets/xoxopayLogo.svg";
 
 export default function RecoveryStatusScreen() {
   const router = useRouter();
@@ -68,7 +68,7 @@ export default function RecoveryStatusScreen() {
                   ]}
                 >
                   <View style={styles.logoWrapper}>
-                    <BlinkLogo width={60} height={28} />
+                    <XoXoPayLogo width={60} height={28} />
                   </View>
                 </Animated.View>
               </View>

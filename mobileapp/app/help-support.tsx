@@ -47,7 +47,7 @@ export default function HelpSupportScreen() {
       label: "Privacy Policy",
     },
     { id: "terms", icon: "document-text-outline", label: "Terms of Service" },
-    { id: "about", icon: "information-circle-outline", label: "About Blinks" },
+    { id: "about", icon: "information-circle-outline", label: "About XoXoPay" },
   ];
 
   return (
@@ -90,7 +90,7 @@ export default function HelpSupportScreen() {
                   contact: "/contact-support",
                   privacy: "/privacy-policy",
                   terms: "/terms-of-service",
-                  about: "/about-blinks",
+                  about: "/about-xoxopay",
                 };
                 if (routes[option.id]) {
                   router.push(routes[option.id]);
@@ -103,7 +103,7 @@ export default function HelpSupportScreen() {
       </ScrollView>
 
       <View style={styles.footer}>
-        <Text style={styles.versionText}>Blinks v1.0.0 (Build 124)</Text>
+        <Text style={styles.versionText}>XoXoPay v1.0.0 (Build 124)</Text>
       </View>
     </SafeAreaView>
   );

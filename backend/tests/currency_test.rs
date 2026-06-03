@@ -1,7 +1,7 @@
-use blinks_backend::config::Config;
-use blinks_backend::service::{Currency, CurrencyService, CacheService};
-use blinks_backend::service::currency_service::UpdateExchangeRateRequest;
-use blinks_backend::db;
+use xoxopay_backend::config::Config;
+use xoxopay_backend::service::{Currency, CurrencyService, CacheService};
+use xoxopay_backend::service::currency_service::UpdateExchangeRateRequest;
+use xoxopay_backend::db;
 use std::sync::Arc;
 
 #[tokio::test]

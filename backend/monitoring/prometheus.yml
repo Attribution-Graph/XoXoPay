@@ -6,11 +6,11 @@ rule_files:
   - alerts.yml
 
 scrape_configs:
-  - job_name: blinks-backend
+  - job_name: xoxopay-backend
     metrics_path: /metrics
     static_configs:
       - targets:
-          - blinks-backend:3000
+          - xoxopay-backend:3000
 
   - job_name: xoxopay-contracts
     metrics_path: /metrics/contracts

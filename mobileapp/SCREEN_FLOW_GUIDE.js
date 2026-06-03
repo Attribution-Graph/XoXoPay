@@ -2,7 +2,7 @@
 // ========================
 
 /*
-  📱 BLINKS MERCHANT SCREENS
+  📱 XOXOPAY MERCHANT SCREENS
   
   Quick Reference Guide
   ---------------------

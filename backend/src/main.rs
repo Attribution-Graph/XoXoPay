@@ -16,11 +16,12 @@ use tower_http::{classify::ServerErrorsFailureClass, trace::TraceLayer};
 use tracing::Span;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
-mod api;
-mod config;
-mod db;
-mod indexer;
-mod services;
+// Bring modules in from the library crate (defined in src/lib.rs)
+use xoxopay_backend::api;
+use xoxopay_backend::config;
+use xoxopay_backend::db;
+use xoxopay_backend::indexer;
+use xoxopay_backend::services;
 
 // Rate limiter state: token bucket per client (IP address)
 #[derive(Clone)]

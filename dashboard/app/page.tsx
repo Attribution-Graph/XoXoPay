@@ -9,6 +9,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (authenticated) {
+      document.cookie = "xoxopay-auth=1; path=/; SameSite=Lax";
       router.replace("/dashboard");
     }
   }, [authenticated, router]);

@@ -703,4 +703,3 @@ mod rate_limit_tests {
         assert_eq!(client_ip(&request), "unknown");
     }
 }
-

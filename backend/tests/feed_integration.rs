@@ -50,8 +50,14 @@ fn feed_router(pool: PgPool) -> Router {
     // (they are pub inside the crate).
     Router::new()
         .route("/public", get(xoxopay_backend::api::feed::get_public_feed))
-        .route("/friends", get(xoxopay_backend::api::feed::get_friends_feed))
-        .route("/private", get(xoxopay_backend::api::feed::get_private_feed))
+        .route(
+            "/friends",
+            get(xoxopay_backend::api::feed::get_friends_feed),
+        )
+        .route(
+            "/private",
+            get(xoxopay_backend::api::feed::get_private_feed),
+        )
         .with_state(pool)
 }
 

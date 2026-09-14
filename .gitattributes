@@ -1,0 +1,26 @@
+# Normalize line endings
+* text=auto eol=lf
+
+# Rust
+*.rs text eol=lf
+
+# Web / JS
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+
+# Docs
+*.md text eol=lf
+
+# Binaries / generated
+*.wasm binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.lock binary
+
+# Generated
+package-lock.json -diff

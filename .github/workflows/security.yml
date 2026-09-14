@@ -89,15 +89,20 @@ jobs:
       - name: Build image for scanning
         run: docker build -t xoxopay-backend:scan ./backend
 
+      - name: Install Trivy
+        env:
+          TRIVY_VERSION: 0.74.0
+        run: |
+          curl -sfLk \
+            "https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz" \
+            -o /tmp/trivy.tar.gz
+          tar -xzf /tmp/trivy.tar.gz -C /usr/local/bin trivy
+
       - name: Run Trivy vulnerability scanner
         env:
           TRIVY_NO_PROGRESS: 'true'
         run: |
-          docker run --rm \
-            -v /var/run/docker.sock:/var/run/docker.sock \
-            -v "$PWD:/scan" \
-            -w /scan \
-            aquasecurity/trivy:0.74.0 image \
+          trivy image \
             --exit-code 1 \
             --severity CRITICAL,HIGH \
             --format sarif \

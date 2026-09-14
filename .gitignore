@@ -1,18 +1,32 @@
 # Dependencies
-server/node_modules/
+node_modules/
+**/node_modules/
 
 # Build outputs
-server/dist/
+backend/target/
+contracts/target/
+dist/
+*.next/
+.next/
 
 # Environment variables
 .env
-server/.env
-
-# OS files
-.DS_Store
+.env.*
+!.env.example
 
 # Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-node_modules
+*.log
+
+# OS files
+.DS_Store
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+
+# Test artefacts
+coverage/

@@ -17,6 +17,3 @@ package-lock.json
 
 # Logs
 *.log
-
-# Generated docs / data
-frontend

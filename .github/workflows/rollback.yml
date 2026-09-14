@@ -46,7 +46,7 @@ jobs:
           fi
 
       - name: Execute rollback
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ steps.env.outputs.host }}
           username: ${{ steps.env.outputs.user }}

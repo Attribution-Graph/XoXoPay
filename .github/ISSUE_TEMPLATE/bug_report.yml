@@ -1,0 +1,51 @@
+name: Bug Report
+description: Report a reproducible bug in XoXoPay.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. For security
+        vulnerabilities, please do **not** open an issue — follow the private
+        disclosure policy in SECURITY.md.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - mobileapp
+        - backend
+        - contracts
+        - dashboard
+        - marketing
+        - deployment / CI
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened, and what did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open the app...
+        2. Tap...
+        3. See error...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      render: shell

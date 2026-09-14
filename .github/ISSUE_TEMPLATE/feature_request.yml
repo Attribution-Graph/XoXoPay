@@ -1,0 +1,35 @@
+name: Feature Request
+description: Suggest a new feature or improvement for XoXoPay.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: Background & motivation
+      description: Why is this feature needed?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: What should this feature do?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - mobileapp
+        - backend
+        - contracts
+        - dashboard
+        - marketing
+        - deployment / CI
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Open questions / alternatives

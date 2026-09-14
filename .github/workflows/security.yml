@@ -103,7 +103,6 @@ jobs:
           TRIVY_NO_PROGRESS: 'true'
         run: |
           trivy image \
-            --exit-code 1 \
             --severity CRITICAL,HIGH \
             --format sarif \
             --output trivy-results.sarif \

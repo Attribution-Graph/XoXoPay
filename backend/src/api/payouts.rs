@@ -164,7 +164,7 @@ pub async fn get_batch_detail(
         WHERE id = $1
         "#,
     )
-    .bind(&batch_id)
+    .bind(batch_id)
     .fetch_optional(&pool)
     .await
     {
@@ -218,7 +218,7 @@ pub async fn get_batch_detail(
         ORDER BY created_at ASC
         "#,
     )
-    .bind(&batch_id)
+    .bind(batch_id)
     .fetch_all(&pool)
     .await
     {
@@ -253,8 +253,7 @@ pub async fn get_batch_detail(
         })
         .collect();
 
-    Json(BatchDetailResponse { batch, recipients })
-    .into_response()
+    Json(BatchDetailResponse { batch, recipients }).into_response()
 }
 
 /// GET /api/payouts/batch/:id/export
@@ -298,7 +297,13 @@ pub async fn export_batch(
     }
 
     (
-        [(header::CONTENT_TYPE, "text/csv; charset=utf-8"), (header::CONTENT_DISPOSITION, "attachment; filename=\"payout-results.csv\"")],
+        [
+            (header::CONTENT_TYPE, "text/csv; charset=utf-8"),
+            (
+                header::CONTENT_DISPOSITION,
+                "attachment; filename=\"payout-results.csv\"",
+            ),
+        ],
         csv,
     )
         .into_response()
@@ -354,10 +359,10 @@ pub async fn create_batch(
         "#,
     )
     .bind(&payload.idempotency_key)
-    .bind(&created_by)
+    .bind(created_by)
     .bind(&payload.currency)
-    .bind(&payload.total_recipients)
-    .bind(&payload.total_amount)
+    .bind(payload.total_recipients)
+    .bind(payload.total_amount)
     .fetch_one(&pool)
     .await
     {
@@ -410,10 +415,7 @@ pub async fn sdp_reconciliation_webhook(
     };
 
     // ── 2. Read the supplied signature ───────────────────────────────────────
-    let signature = match headers
-        .get("X-SDP-Signature")
-        .and_then(|v| v.to_str().ok())
-    {
+    let signature = match headers.get("X-SDP-Signature").and_then(|v| v.to_str().ok()) {
         Some(s) => s,
         None => {
             return (

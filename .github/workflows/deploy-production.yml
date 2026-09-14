@@ -37,7 +37,7 @@ jobs:
       url: ${{ vars.PRODUCTION_URL }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Record pre-deploy state (for rollback)
         uses: appleboy/ssh-action@v1.0.3

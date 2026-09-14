@@ -25,7 +25,7 @@ jobs:
       short_sha: ${{ steps.vars.outputs.short_sha }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set short SHA
         id: vars

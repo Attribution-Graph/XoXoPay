@@ -1,0 +1,22 @@
+# Build outputs
+backend/target
+contracts/target
+dist
+.next
+coverage
+
+# Dependencies
+node_modules
+
+# Environments
+.env
+.env.*
+
+# Lockfiles
+package-lock.json
+
+# Logs
+*.log
+
+# Generated docs / data
+frontend
